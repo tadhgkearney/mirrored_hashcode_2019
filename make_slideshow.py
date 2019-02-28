@@ -13,8 +13,8 @@ def make_slides(photo_list):
     return slideshow
 
 def add_next(photo, slideshow, photo_list, start_index):
-    while start_index >= 0:
-        next_photo_index = find_next(photo, photo_list, start_index)
+    while start_index > 0:
+        next_photo_index = find_next_lol(photo, photo_list, start_index)
         next_photo = photo_list[next_photo_index]
         slideshow.add_photo(next_photo)
         photo_list[next_photo_index] = None
@@ -42,7 +42,8 @@ def find_next(photo, photo_list, start_index):
                 return my_photo
     return my_photo
 
-
+def  find_next_lol(photo, photo_list, start_index):
+    return start_index
 
 
 def get_same_and_different(photo, other):
