@@ -1,8 +1,8 @@
-from reading_object import readPhotos
+from input import getPhotoList
 from DONT_FUCKING_DELETE_THIS import *
 
 def merge(chara):
-    unmerged = readPhotos(chara)
+    unmerged = getPhotoList(chara)
     vertical_photos = []
     merged_photos = []
     for i in unmerged:
