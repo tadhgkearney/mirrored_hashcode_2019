@@ -15,7 +15,7 @@ class Photo(object):
         self._num_tags = num_tags
         self._tags = tags
         self._photo_number = photo_number
-        self._merged = False
+        self._m = False
 
 
     @property
@@ -36,7 +36,7 @@ class Photo(object):
 
     @property
     def merged(self):
-        return self._merged
+        return self._m
 
     def __str__(self):
         return '''Photo Num: %s
@@ -44,3 +44,6 @@ Orientation: %s
 No of tags: %s
 Tags: %s
         '''%(self.photo_number, self.orientation, self.num_tags, self.tags)
+
+if __name__=='__main__':
+    p=Photo(213,'H',5,[1,1,2,4]).merged
