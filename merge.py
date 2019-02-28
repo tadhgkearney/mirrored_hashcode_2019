@@ -13,7 +13,7 @@ def merge(chara):
     vertical_photos.sort(key=lambda x: x.num_tags)
     index = len(vertical_photos)-1
     for i in range(len(vertical_photos)//2):
-        a = vertical_photos[0]
+        a = vertical_photos[i]
         b = vertical_photos[index - i]
         resultList = list(set(a.tags) | set(b.tags))
         new = Photo((a.photo_number, b.photo_number), 'H', len(resultList), resultList)

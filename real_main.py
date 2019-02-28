@@ -1,6 +1,6 @@
 import merge
 import make_slideshow
-letters=['a','b','c','d','e']
+letters=['c']
 for letter in letters:
     print('Starting %s'%letter)
     photo_list = merge.merge(letter)
