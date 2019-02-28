@@ -4,12 +4,13 @@ class Photo(object):
         self._num_tags = num_tags
         self._tags = tags
         self._photo_number = photo_number
-
         self._merged = False
+
 
     @property
     def photo_number(self):
         return self._photo_number
+
     @property
     def orientation(self):
         return self._orientation
@@ -21,6 +22,10 @@ class Photo(object):
     @property
     def tags(self):
         return self._tags
+
+    @property
+    def merged(self):
+        return self._merged
 
     def __str__(self):
         return '''Photo Num: %s
