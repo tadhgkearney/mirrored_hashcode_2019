@@ -1,23 +1,26 @@
 from reading_object import readPhotos
-import DONT_FUCKING_DELETE_THIS
+from DONT_FUCKING_DELETE_THIS import *
 
-def merge():
-    unmerged = readPhotos('a')
-    vertical_photos =[]
+def merge(chara):
+    unmerged = readPhotos(chara)
+    vertical_photos = []
     merged_photos = []
+    print(unmerged)
     for i in unmerged:
-        if i._orientation == 'V':
+        if i.orientation() == 'V':
             vertical_photos.append(i)
         else:
             merged_photos.append(i)
     vertical_photos.sort()
-    length = range(vertical_photos)
-    for i in length:
-        a = vertical_list[0]
-        b = vertical_list[length - i]
-        restultList = list(set(a) | set(b))
-        new = Photo((a._photo_numer, b._photo_number), 'H')
+    length = len(vertical_photos)
+    for i in range(length//2):
+        a = vertical_photos[0]
+        b = vertical_photos[length - i]
+        resultList = list(set(a) | set(b))
+        new = Photo((a.photo_numer(), b.photo_number()), 'H', len(resultList), resultList)
+        merged_photos.append(new)
+    print(merged_photos)
     return merged_photos
 
 if __name__ == "__main__":
-    merge()
+    merge('a')
