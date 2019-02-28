@@ -1,8 +1,8 @@
 class Photo(object):
-    def __init__(self,orientation,num_tags,tags):
-        self._orientation=orientation
-        self._num_tags=num_tags
-        self._tags=tags
+    def __init__(self, orientation, num_tags, tags):
+        self._orientation = orientation
+        self._num_tags = num_tags
+        self._tags = tags
 
     @property
     def orientation(self):
@@ -15,4 +15,3 @@ class Photo(object):
     @property
     def tags(self):
         return self._tags
-
