@@ -19,3 +19,11 @@ class Photo(object):
     @property
     def tags(self):
         return self._tags
+
+
+    def __str__(self):
+        return '''Photo Num: %s
+Orientation: %s
+No of tags: %s
+Tags: %s
+        '''%(self.photo_number, self.orientation, self.num_tags, self.tags)

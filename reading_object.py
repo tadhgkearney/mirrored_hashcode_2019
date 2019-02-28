@@ -10,4 +10,5 @@ def readPhotos(letter):
 
 
 if __name__=='__main__':
-    print(readPhotos('a'))
+    for photo in(readPhotos('a')):
+        print(photo)
