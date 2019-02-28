@@ -1,5 +1,15 @@
+'''
+    Class representation of a photo
+'''
 class Photo(object):
     def __init__(self, photo_number, orientation, num_tags, tags):
+        '''
+        Constructor for Photo object
+        :param photo_number: int representing the id of the photo
+        :param orientation: Character representing of the orientation of the photo
+        :param num_tags: int representing the number of tags a photo has
+        :param tags: Array of the tags
+        '''
         self._orientation = orientation
         self._num_tags = num_tags
         self._tags = tags
