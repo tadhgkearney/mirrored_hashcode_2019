@@ -1,4 +1,13 @@
 import shelve
-s=shelve.open('shelves/a_test')
-for i in s:
-    current_photo=s[i]
+def readPhotos(letter):
+    l=[]
+    s=shelve.open('shelves/%s'%(letter))
+    for i in s:
+        current_photo=s[i]
+        l.append(current_photo)
+
+    return l
+
+
+if __name__=='__main__':
+    print(readPhotos('a'))
