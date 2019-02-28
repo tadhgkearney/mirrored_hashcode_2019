@@ -12,9 +12,8 @@ class SlideShow:
         f.writelines("%d\n" % len(self._slideShow))
 
         for photo in self._slideShow:
-            print(photo.photo_number)
 
-            if photo.merged:
+            if type(photo.photo_number)==tuple:
                 f.writelines("%d %d\n" % (photo.photo_number[0], photo.photo_number[1]))
             else:
                 f.writelines("%s\n" % str(photo.photo_number))
