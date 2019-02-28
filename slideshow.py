@@ -11,6 +11,13 @@ class SlideShow:
 
         f.write("%d" % len(self._slideShow))
 
-        for photo in self._slideShow
+        for photo in self._slideShow:
+
+            if photo.merged is True:
+                f.write("%d %d" % (photo.photo_number[0], photo.photo_number[1]))
+            else:
+                f.write("%d" % photo.photo_number)
+
+        f.close()
 
 
