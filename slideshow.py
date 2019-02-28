@@ -5,6 +5,12 @@ class SlideShow:
     def add_photo(self, photo):
         self._slideShow.append(photo)
 
-    def output(self):
-        # TODO This stuff
-        pass
+    def output(self, letter):
+
+        f = open("output/%s" % letter, "a+")
+
+        f.write("%d" % len(self._slideShow))
+
+        for photo in self._slideShow
+
+
