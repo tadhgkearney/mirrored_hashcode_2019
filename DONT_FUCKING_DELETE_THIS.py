@@ -38,6 +38,10 @@ class Photo(object):
     def merged(self):
         return self._m
 
+    @merged.setter
+    def merged(self,b):
+        self._merged=b
+
     def __str__(self):
         return '''Photo Num: %s
 Orientation: %s
