@@ -5,10 +5,19 @@ def make_slides(photo_list):
     photo_list = list(photo_list)
     photo_list.sort(key=lambda x: x.num_tags, reverse=True)
     slideshow = SlideShow()
-    add_next(photo_list.pop(), slideshow, photo_list, len(photo_list)-1)
+
+    first_photo = photo_list.pop()
+    slideshow.add_photo(first_photo)
+    add_next(first_photo, slideshow, photo_list, len(photo_list)-1)
+    return slideshow
 
 def add_next(photo, slideshow, photo_list, start_index):
-    pass
+    if start_index < 0:
+        return
+    next_photo = find_next(photo, photo_list, start_index)
+    slideshow.add_photo(next_photo)
+    photo_list.remove(next_photo)
+    add_next(next_photo, slideshow, photo_list, start_index - 1)
 
 
 def find_next(photo, photo_list, start_index):
