@@ -7,3 +7,4 @@ class SlideShow:
 
     def output(self):
         # TODO This stuff
+        pass
