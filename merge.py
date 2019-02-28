@@ -5,13 +5,12 @@ def merge(chara):
     unmerged = readPhotos(chara)
     vertical_photos = []
     merged_photos = []
-    print(unmerged)
     for i in unmerged:
-        if i.orientation() == 'V':
+        if i.orientation == 'V':
             vertical_photos.append(i)
         else:
             merged_photos.append(i)
-    vertical_photos.sort()
+    vertical_photos.sort(key=lambda x: x.num_tags)
     length = len(vertical_photos)
     for i in range(length//2):
         a = vertical_photos[0]
