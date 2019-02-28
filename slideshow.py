@@ -7,16 +7,17 @@ class SlideShow:
 
     def output(self, letter):
 
-        f = open("output/%s" % letter, "a+")
+        f = open("output/%s" % letter, "w")
 
-        f.write("%d" % len(self._slideShow))
+        f.writelines("%d\n" % len(self._slideShow))
 
         for photo in self._slideShow:
+            print(photo.photo_number)
 
-            if photo.merged is True:
-                f.write("%d %d" % (photo.photo_number[0], photo.photo_number[1]))
+            if photo.merged:
+                f.writelines("%d %d\n" % (photo.photo_number[0], photo.photo_number[1]))
             else:
-                f.write("%d" % photo.photo_number)
+                f.writelines("%s\n" % str(photo.photo_number))
 
         f.close()
 

@@ -50,4 +50,5 @@ Tags: %s
         '''%(self.photo_number, self.orientation, self.num_tags, self.tags)
 
 if __name__=='__main__':
-    p=Photo(213,'H',5,[1,1,2,4]).merged
+    p=Photo(213,'H',5,[1,1,2,4])
+    p.merged

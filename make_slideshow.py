@@ -3,7 +3,7 @@ from slideshow import SlideShow
 
 def make_slides(photo_list):
     photo_list = list(photo_list)
-    photo_list.sort(key=lambda x: x.num_tags, reverse=True)
+    photo_list.sort(key=lambda x: int(x.num_tags), reverse=True)
     slideshow = SlideShow()
 
     first_photo = photo_list.pop()
