@@ -9,6 +9,7 @@ class Photo(object):
         :param orientation: Character representing of the orientation of the photo
         :param num_tags: int representing the number of tags a photo has
         :param tags: Array of the tags
+        Happy liam? 😠😠😠😠😠😠😠😠😠
         '''
         self._orientation = orientation
         self._num_tags = num_tags
