@@ -6,6 +6,7 @@ class SlideShow:
         self._slideShow.append(photo)
 
     def output(self, letter):
+        print('Writing output')
 
         f = open("output/%s" % letter, "w")
 

@@ -1,6 +1,7 @@
 from DONT_FUCKING_DELETE_THIS import Photo
 
 def getPhotoList(letter):
+    print('Getting photo list')
     photo_list = []
     fin = open('input_files/%s.txt' % (letter))
     id = 0

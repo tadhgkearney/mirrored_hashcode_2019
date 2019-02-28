@@ -2,6 +2,7 @@ from input import getPhotoList
 from DONT_FUCKING_DELETE_THIS import *
 
 def merge(chara):
+    print('Starting merge')
     unmerged = getPhotoList(chara)
     vertical_photos = []
     merged_photos = []
