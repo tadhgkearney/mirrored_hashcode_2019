@@ -1,5 +1,5 @@
 import shelve
-from photo import Photo
+from DONT_FUCKING_DELETE_THIS import Photo
 
 shelve_file =shelve.open('shelves/a_test')
 fin=open('input_files/a_example.txt')
