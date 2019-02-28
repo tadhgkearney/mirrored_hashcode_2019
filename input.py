@@ -15,7 +15,7 @@ for file in files:
             o=l[0]
             num=l[1]
             tags=l[2:]
-            photo=Photo(o,num,tags)
+            photo=Photo(id,o,num,tags)
             shelve_file[str(id)]=photo
             id+=1
     shelve_file.close()
