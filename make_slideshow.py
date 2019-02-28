@@ -13,15 +13,14 @@ def make_slides(photo_list):
     return slideshow
 
 def add_next(photo, slideshow, photo_list, start_index):
-    if start_index < 0:
-        return
-    next_photo_index = find_next(photo, photo_list, start_index)
-    next_photo = photo_list[next_photo_index]
-    slideshow.add_photo(next_photo)
-    photo_list[next_photo_index] = None
-    while photo_list[start_index] is None:
+    while start_index >= 0:
+        next_photo_index = find_next(photo, photo_list, start_index)
+        next_photo = photo_list[next_photo_index]
+        slideshow.add_photo(next_photo)
+        photo_list[next_photo_index] = None
         start_index -= 1
-    add_next(next_photo, slideshow, photo_list, start_index - 1)
+        while photo_list[start_index] is None:
+            start_index -= 1
 
 
 def find_next(photo, photo_list, start_index):
@@ -39,7 +38,7 @@ def find_next(photo, photo_list, start_index):
         if diff is not None and diff < new_diff:
             diff = new_diff
             my_photo = start_index
-            if diff < 50:
+            if diff < 10:
                 return my_photo
     return my_photo
 
