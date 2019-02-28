@@ -17,6 +17,7 @@ def merge(chara):
         b = vertical_photos[length - i]
         resultList = list(set(a) | set(b))
         new = Photo((a.photo_number, b.photo_number), 'H', len(resultList), resultList)
+        new.merged = True
         merged_photos.append(new)
     print(merged_photos)
     return merged_photos
